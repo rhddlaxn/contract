@@ -8,7 +8,7 @@ CONTRACT helloworld: public contract {
 
         ACTION hi(name user){
             
-            check(has_auth(get_self() ),"ㄲㅈ");
+            check(has_auth(get_self()) || has_auth("sks123123123"_n),"ㄲㅈ");
             print("hello, ", user);
             //require_auth(user); === 인증된사용자아니면 에러 
 
