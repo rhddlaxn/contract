@@ -15,6 +15,10 @@ CONTRACT helloworld: public contract {
             //has_auth() -> T or F 구별용으로쓰임
             
         }
+        ACTION getaccount(name user) {
+            require_auth( get_self());
+            print(is_account(user));
+        }
 
     private:
 
